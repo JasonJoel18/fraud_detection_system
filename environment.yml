@@ -1,0 +1,31 @@
+# Conda Environment Setup Instructions
+#  - Using an environment.yml file with conda
+#  - Key Terminal Commands:
+#
+#    conda env create -f environment.yml
+#    conda env update --file environment.yml --prune
+#    conda env export --name tracking-barbell-exercises > environment.yml
+#    conda env remove --name tracking-barbell-exercises
+#    conda env list
+
+
+name: ml-alz-cls
+channels:
+  - conda-forge
+  - apple
+  - defaults
+dependencies:
+  - python=3.9.18
+  - pip
+  - numpy
+  - tensorflow-deps
+  - pandas
+  - tensorflow-macos
+  - tensorflow-metal
+  - pip:
+      - pip==24.3.1
+      - wheel
+      - setuptools
+      - scikit-learn
+      - matplotlib
+      - pandas
